@@ -1,0 +1,6 @@
+Takeout/
+venv/
+.vscode
+.cache
+.cache.sqlite
+Records.json
