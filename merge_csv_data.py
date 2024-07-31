@@ -1,14 +1,10 @@
 import pandas as pd
 import os
 
-# Read the CSV files
-# Define the directory path
 directory = './csv_data/weather data toronto/'
 
-# Get all the CSV files in the directory
 csv_files = [file for file in os.listdir(directory) if file.endswith('.csv')]
 
-# Read and merge the CSV files
 dataframes = []
 for file in csv_files:
     filepath = os.path.join(directory, file)
@@ -17,7 +13,6 @@ for file in csv_files:
 
 merged_df = pd.concat(dataframes)
 
-# Sort the merged dataframe by date
 merged_df.sort_values(by='UTC_DATE', inplace=True)
 
 # Save the merged dataframe to a new CSV file
